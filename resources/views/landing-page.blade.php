@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+@extends('layouts.main')
 
-    <title>Landing Page Mister and Miss Sumsel 2024</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body>
-    <h1 class="text-center text-sky-300 font-bold text-3xl">MISTER & MISS SUMSEL 2024</h1>
-</body>
-</html>
+@section('container')
+    {{-- <h1 class="text-center text-sky-300 font-bold text-3xl">MISTER & MISS SUMSEL 2024</h1>
+    <div class="w-full h-20 bg-navy"></div>
+    <div class="w-full h-20 bg-gold"></div>
+    <div class="w-full h-20 bg-silver"></div>
+    <div class="w-full h-20 bg-dark_silver"></div>
+    <div class="w-full h-20 bg-light_blue"></div>
+    <div class="flex">
+        <img loading="lazy" src="img/founder_mms.png" alt="Founder Mister Miss Sumsel">
+        <img loading="lazy" src="img/co_founder_mms.png" alt="Co Founder Mister Miss Sumsel">
+    </div>
+    <div class="flex">
+        <img loading="lazy" src="img/logo_b_management.png" alt="Logo B Management">
+        <img loading="lazy" src="img/logo_b_model.png" alt="Logo B Model">
+        <img loading="lazy" src="img/logo_mister_miss_sumsel.png" alt="Logo Mister Miss Sumsel">
+    </div> --}}
+    
+    <a href="/contact" class="inline-block shadow bg-blue-300 p-3 rounded mt-4">Home <i class="fa-solid fa-address-book"></i></a>
+@endsection
