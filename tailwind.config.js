@@ -23,6 +23,12 @@ export default {
                 dark_silver: "#4F4F4F",
                 light_blue: "#4682B4",
             },
+            spacing: {
+                18: "4.5rem",
+                30: "7.5rem",
+                34: "8.5rem",
+                42: "10.5rem",
+            }
         },
     },
     plugins: [],
