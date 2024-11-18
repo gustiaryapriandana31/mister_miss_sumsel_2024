@@ -2,15 +2,13 @@
 
 @section('container')
     {{-- Section of Hero Image --}}
-    <section class="h-screen bg-gradient-to-br from-navy via-sky-800 to-sky-900 p-7 relative">
-        <h1 class="text-white text-center font-bold font-roboto text-5xl mt-2">MISTER & MISS SUMSEL 2024</h1>
+    <section id="banner-image">
+        {{-- <h1 class="text-white text-center font-bold font-roboto text-5xl mt-2">MISTER & MISS SUMSEL 2024</h1>
         <p class="text-white text-center font-normal font-montserrat text-2xl my-4">Daftarkan Segera Dirimu</p>
         <button class="mt-24 mx-auto block rounded-full w-1/5 h-16 text-2xl text-white hover:text-navy font-bold px-5 border border-gold hover:bg-gold opacity-80">DAFTAR</button>
-        {{-- Image --}}
         <img src="img/co_founder_mms.png" class="inline-block absolute bottom-0 left-12 h-4/5" alt="Co Founder MMS">
         <img src="img/founder_mms.png" class="inline-block absolute bottom-0 right-12" alt="Founder MMS">
-
-        {{-- Caption --}}
+        
         <div class="text-gold opacity-95 font-bold text-4xl shadow-lg shadow-navy font-montserrat">
             <h1 class="absolute bottom-5 left-16">M. ZAHIZAN PUTRA</h1>
             <h1 class="absolute bottom-5 right-16">BAYU SYAMPRAKASA</h1>
@@ -18,7 +16,8 @@
         <div class="text-white font-bold text-lg font-inter">
             <p class="absolute bottom-16 left-1/4">Co-Founder</p>
             <p class="absolute bottom-16 right-[30%]">Founder</p>
-        </div>
+        </div> --}}
+        <img src="img/1.jpg" alt="Banner Image of B Management">
     </section>
 
 
