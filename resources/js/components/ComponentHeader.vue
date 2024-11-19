@@ -22,7 +22,7 @@
                 }"
             >
                 <ul
-                    class="flex flex-col pt-[120px] px-4 gap-y-4 gap-x-12 font-semibold list-none lg:p-0 lg:flex-row mt-0 lg:justify-between"
+                    class="flex flex-col pt-[120px] px-4 gap-y-8 lg:gap-y-4 gap-x-12 font-semibold list-none lg:p-0 lg:flex-row mt-0 lg:justify-between"
                 >
                     <li
                         v-for="(menu, index) in menus"
@@ -34,11 +34,17 @@
                         }"
                         @click="toggleSubMenu(index)"
                     >
-                        {{ menu.title }}
+                        <div v-if="!menu.link">
+                            {{ menu.title }}
+                        </div>
+                        <a v-if="menu.link" :href="menu.link">
+                            {{ menu.title }}
+                        </a>
                         <ul
-                            class="nav-sub-menu !text-lg lg:!text-base grid grid-rows-[0fr] opacity-0 h-0 transition-all duration-300 ease-in-out my-4 mx-8 space-y-3 list-none lg:opacity-100 lg:h-auto lg:absolute lg:m-0 lg:left-0 lg:top-16 lg:hidden"
+                            v-else
+                            class="nav-sub-menu !text-lg lg:!text-base grid grid-rows-[0fr] opacity-0 h-0 transition-[height] duration-200 ease-in-out mx-8 space-y-3 list-none lg:opacity-100 lg:h-auto lg:absolute lg:m-0 lg:left-0 lg:top-16 lg:hidden"
                             :class="{
-                                'grid-rows-[1fr] opacity-100 h-auto':
+                                'grid-rows-[1fr] opacity-100 h-auto my-4':
                                     openSubMenuIndex === index,
                             }"
                         >
@@ -51,12 +57,20 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="bg-gold hover:bg-gold/85 block w-full text-black transition-all duration-200 py-2 px-3 rounded-sm lg:hidden"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="z-50 space-x-4 text-white">
                 <a
                     href="#"
-                    class="bg-gold/80 hover:bg-gold text-black transition-all duration-200 py-2 px-3 rounded-sm hidden lg:block"
+                    class="bg-gold hover:bg-gold/85 text-black transition-all duration-200 py-2 px-3 rounded-sm hidden lg:block"
                 >
                     Contact Us
                 </a>
@@ -77,34 +91,14 @@
 </template>
 
 <script>
+import { menus } from "../menus.js";
+
 export default {
     data() {
         return {
             isNavOpen: false,
             openSubMenuIndex: null,
-            menus: [
-                {
-                    title: "B Management",
-                    items: [],
-                },
-                {
-                    title: "B Model School",
-                    items: [],
-                },
-                {
-                    title: "Mister Miss Sumsel",
-                    items: [
-                        { name: "About", link: "#" },
-                        { name: "Daftar Finalis", link: "#" },
-                        { name: "Vote", link: "#" },
-                    ],
-                },
-                {
-                    title: "Berita",
-                    link: "#",
-                    items: [],
-                },
-            ],
+            menus,
         };
     },
     mounted() {

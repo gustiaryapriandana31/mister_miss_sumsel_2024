@@ -16,7 +16,11 @@ import { createApp } from "vue";
 const app = createApp({});
 
 import ComponentHeader from "./components/ComponentHeader.vue";
+import ComponentFooter from "./components/ComponentFooter.vue";
+import ComponentMisterMissCountdown from "./components/mistermiss/ComponentCountdown.vue";
 app.component("component-header", ComponentHeader);
+app.component("component-footer", ComponentFooter);
+app.component("component-mistermiss-countdown", ComponentMisterMissCountdown);
 
 /**
  * The following block of code may be used to automatically register your
