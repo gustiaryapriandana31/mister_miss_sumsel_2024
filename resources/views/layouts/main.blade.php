@@ -9,17 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+    <!-- Icons -->
     <link rel="stylesheet" href={{ asset('fontawesome-free-6.6.0-web/css/all.min.css') }}>
 
-    <title>Landing Page Mister and Miss Sumsel 2024</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ asset('img/logo_b_management.png') }}" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    @stack('styles')
+
+    <!-- Title -->
+    <title>{{ $title }}</title>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    <div id="app">
+        <component-header></component-header>
 
-    <div>
-        @yield('container')
+        <main>
+            @yield('content')
+        </main>
     </div>
-
 </body>
 </html>

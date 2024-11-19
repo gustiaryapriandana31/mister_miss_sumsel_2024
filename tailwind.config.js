@@ -1,4 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
+import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -12,9 +12,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                roboto: ["Roboto", "sans-serif"],
-                inter: ["Inter", "sans-serif"],
-                montserrat: ["Montserrat", "sans-serif"],
+                inter: ["Inter", ...defaultTheme.fontFamily.sans],
+                montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 navy: "#1A1A40",
@@ -28,7 +27,12 @@ export default {
                 30: "7.5rem",
                 34: "8.5rem",
                 42: "10.5rem",
-            }
+            },
+        },
+        screens: {
+            xxs: "320px",
+            xs: "426px",
+            ...defaultTheme.screens,
         },
     },
     plugins: [],
