@@ -15,13 +15,14 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('img/logo_b_management.png') }}" type="image/x-icon">
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('scss/main.css') }}">
     @stack('styles')
 
     <!-- Title -->
     <title>{{ $title }}</title>
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">

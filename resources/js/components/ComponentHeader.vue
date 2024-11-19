@@ -1,71 +1,77 @@
 <template>
     <header
-        class="fixed z-[1000] w-full px-4 py-1 md:px-8 bg-navy flex justify-between items-center space-x-2 transition-all duration-200 shadow-xl"
+        class="fixed z-[1000] w-full transition-all duration-200 shadow-xl bg-navy"
     >
-        <a href="/" class="z-50">
-            <img
-                src="/img/logo_b_management.png"
-                alt="nav-logo"
-                class="w-[90px]"
-            />
-        </a>
-        <nav
-            id="headerNav"
-            class="w-[80vw] h-[100vh] top-0 absolute -right-[100vw] transition-all duration-300 lg:h-auto lg:w-auto lg:block lg:relative lg:right-auto lg:p-8"
-            :class="{
-                'right-0 bg-navy shadow-2xl lg:bg-transparent lg:shadow-none':
-                    isNavOpen,
-            }"
+        <div
+            class="container flex justify-between items-center space-x-2"
+            id="header"
         >
-            <ul
-                class="flex flex-col pt-[120px] px-4 gap-y-4 gap-x-12 font-semibold list-none lg:p-0 lg:flex-row mt-0 lg:justify-between"
+            <a href="/" class="z-50">
+                <img
+                    src="/img/logo_b_management.png"
+                    alt="nav-logo"
+                    class="w-[90px]"
+                />
+            </a>
+            <nav
+                id="headerNav"
+                class="w-[80vw] h-[100vh] top-0 absolute -right-[100vw] transition-all duration-300 lg:h-auto lg:w-auto lg:block lg:relative lg:right-auto lg:p-8"
+                :class="{
+                    'right-0 bg-navy shadow-2xl lg:bg-transparent lg:shadow-none':
+                        isNavOpen,
+                }"
             >
-                <li
-                    v-for="(menu, index) in menus"
-                    :key="index"
-                    class="nav-menu text-2xl lg:text-base z-50 relative text-white hover:text-gold duration-200 cursor-pointer"
-                    :class="{
-                        'text-gold lg:text-white': openSubMenuIndex === index,
-                    }"
-                    @click="toggleSubMenu(index)"
+                <ul
+                    class="flex flex-col pt-[120px] px-4 gap-y-4 gap-x-12 font-semibold list-none lg:p-0 lg:flex-row mt-0 lg:justify-between"
                 >
-                    {{ menu.title }}
-                    <ul
-                        class="nav-sub-menu !text-lg lg:!text-base grid grid-rows-[0fr] opacity-0 h-0 transition-all duration-300 ease-in-out my-4 mx-8 space-y-3 list-none lg:opacity-100 lg:h-auto lg:absolute lg:m-0 lg:left-0 lg:top-16 lg:hidden"
+                    <li
+                        v-for="(menu, index) in menus"
+                        :key="index"
+                        class="nav-menu text-xl lg:text-base z-50 relative text-white hover:text-gold duration-200 cursor-pointer"
                         :class="{
-                            'grid-rows-[1fr] opacity-100 h-auto':
+                            'text-gold lg:text-white':
                                 openSubMenuIndex === index,
                         }"
+                        @click="toggleSubMenu(index)"
                     >
-                        <li
-                            v-for="(item, subIndex) in menu.items"
-                            :key="subIndex"
-                            class="text-white hover:text-gold duration-200"
+                        {{ menu.title }}
+                        <ul
+                            class="nav-sub-menu !text-lg lg:!text-base grid grid-rows-[0fr] opacity-0 h-0 transition-all duration-300 ease-in-out my-4 mx-8 space-y-3 list-none lg:opacity-100 lg:h-auto lg:absolute lg:m-0 lg:left-0 lg:top-16 lg:hidden"
+                            :class="{
+                                'grid-rows-[1fr] opacity-100 h-auto':
+                                    openSubMenuIndex === index,
+                            }"
                         >
-                            <a :href="item.link">{{ item.name }}</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="z-50 space-x-4 text-white">
-            <a
-                href="#"
-                class="bg-gold/80 hover:bg-gold text-black transition-all duration-200 py-2 px-3 rounded-sm hidden lg:block"
-            >
-                Contact Us
-            </a>
-            <span
-                class="text-white text-xl lg:hidden cursor-pointer"
-                id="navToggler"
-                @click="toggleNav"
-            >
-                <i
-                    :class="
-                        isNavOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars'
-                    "
-                ></i>
-            </span>
+                            <li
+                                v-for="(item, subIndex) in menu.items"
+                                :key="subIndex"
+                                class="text-white hover:text-gold duration-200"
+                            >
+                                <a :href="item.link">{{ item.name }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="z-50 space-x-4 text-white">
+                <a
+                    href="#"
+                    class="bg-gold/80 hover:bg-gold text-black transition-all duration-200 py-2 px-3 rounded-sm hidden lg:block"
+                >
+                    Contact Us
+                </a>
+                <span
+                    class="text-white text-xl lg:hidden cursor-pointer"
+                    id="navToggler"
+                    @click="toggleNav"
+                >
+                    <i
+                        :class="
+                            isNavOpen ? 'fa-solid fa-times' : 'fa-solid fa-bars'
+                        "
+                    ></i>
+                </span>
+            </div>
         </div>
     </header>
 </template>
@@ -102,7 +108,7 @@ export default {
         };
     },
     mounted() {
-        const header = document.querySelector("header");
+        const header = document.getElementById("header");
         const nav = document.getElementById("headerNav");
         const navToggler = document.getElementById("navToggler");
 
@@ -169,7 +175,7 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 1024px) {
-    header {
+    #header {
         &::before {
             content: "";
             position: absolute;
@@ -196,7 +202,7 @@ export default {
         }
     }
 
-    header.over {
+    #header.over {
         &::before {
             top: 0;
         }
