@@ -31,6 +31,8 @@
         <main>
             @yield('content')
         </main>
+
+        <component-footer></component-footer>
     </div>
 </body>
 </html>
