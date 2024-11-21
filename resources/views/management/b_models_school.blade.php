@@ -3,7 +3,7 @@
 @section('content')
     {{-- Section of Hero Image --}}
     <section id="banner-image" class="min-h-[100vh] max-h-[100vh] relative overflow-hidden">
-        <img src="img/3.jpg" alt="Banner Image of B Management" class="absolute top-0 left-0 w-full h-full object-center object-cover">
+        <img src="img/banner_model_school.jpg" alt="Banner Image of B Models School" class="absolute top-0 left-0 w-full h-full object-center object-cover">
     </section>
 
     <div class="container">
@@ -38,7 +38,5 @@
                 <p><i class="mr-2 mt-4 text-gold fa-solid fa-phone text-sm"></i>Contact Person : <a target="_blank" href="https://wa.me/6282184371382" class="inline-block">0821-8437-1382</a></p>
             </div>
         </section>    
-
     </div>
-
 @endsection

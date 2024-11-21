@@ -27,6 +27,7 @@ export default {
                 30: "7.5rem",
                 34: "8.5rem",
                 42: "10.5rem",
+                46: "11.5rem",
             },
         },
         screens: {

@@ -13,13 +13,13 @@ export const menus = [
         title: "Mister Miss Sumsel",
         items: [
             { name: "Tentang Kami", link: "/mister-miss-sumsel" },
-            { name: "Daftar Finalis", link: "#" },
+            { name: "Daftar Finalis", link: "/mister-miss-sumsel/finalis" },
             { name: "Vote", link: "#" },
         ],
     },
     {
         title: "Berita",
-        link: "#",
+        link: "/berita",
         items: [],
     },
 ];

@@ -3,7 +3,7 @@
 @section('content')
     {{-- Section of Hero Image --}}
     <section id="banner-image" class="min-h-[100vh] max-h-[100vh] relative overflow-hidden">
-        <img src="img/1.jpg" alt="Banner Image of B Management" class="absolute top-0 left-0 w-full h-full object-fill">
+        <img src="img/banner_b_management.jpg" alt="Banner Image of B Management" class="absolute top-0 left-0 w-full h-full object-fill">
     </section>
 
     <div class="container">
@@ -13,8 +13,8 @@
             <p class="text-silver text-center lg:text-start text-sm lg:text-base lg:ml-10 mt-2 mb-10">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
     
             <div class="flex flex-col lg:flex-row lg:p-3 p-2 justify-center gap-10 items-center">
-                <div class="flex flex-row gap-6 lg:gap-10 p-4 lg:p-7 shadow-sm shadow-silver rounded-md">
-                    <img src="img/founder_mms.png" class="w-32 h-52 lg:w-36 lg:h-56 bg-gold shadow-md px-5 basis-1/2 rounded-md" alt="Founder MMS">
+                <div class="flex flex-row items-center gap-6 lg:gap-10 p-4 lg:p-7 shadow-sm shadow-silver rounded-md">
+                    <img src="img/founder_mms.png" class="w-32 h-46 lg:w-36 lg:h-56 bg-gold shadow-md px-5 basis-1/2 rounded-md" alt="Founder MMS">
                     <article class="flex flex-col justify-center">
                         <h4 class="text-navy font-bold font-inter">BAYU SYAMPRAKASA</h4>
                         <p class="lg:text-sm text-xs">Founder Mister & Miss Sumsel 2024</p>
@@ -26,8 +26,8 @@
                         </div>
                     </article>
                 </div>
-                <div class="flex flex-row gap-6 lg:gap-10 p-4 lg:p-7 shadow-sm shadow-silver rounded-md">
-                    <img src="img/co_founder_mms.png" class="w-32 h-52 lg:w-36 lg:h-56 bg-gold shadow-md px-5 basis-1/2 rounded-md" alt="Founder MMS">
+                <div class="flex flex-row items-center gap-6 lg:gap-10 p-4 lg:p-7 shadow-sm shadow-silver rounded-md">
+                    <img src="img/co_founder_mms.png" class="w-32 h-46 lg:w-36 lg:h-56 bg-gold shadow-md px-5 basis-1/2 rounded-md" alt="Founder MMS">
                     <article class="flex flex-col justify-center">
                         <h4 class="text-navy font-bold font-inter">MUHAMMAD ZAHIZAN PUTRA</h4>
                         <p class="lg:text-sm text-xs">Co-Founder Mister & Miss Sumsel 2024</p>
