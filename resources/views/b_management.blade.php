@@ -1,27 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
-    {{-- Section of Hero Image --}}
-    <section id="banner-image">
-        {{-- <h1 class="text-white text-center font-bold font-roboto text-5xl mt-2">MISTER & MISS SUMSEL 2024</h1>
-        <p class="text-white text-center font-normal font-montserrat text-2xl my-4">Daftarkan Segera Dirimu</p>
-        <button class="mt-24 mx-auto block rounded-full w-1/5 h-16 text-2xl text-white hover:text-navy font-bold px-5 border border-gold hover:bg-gold opacity-80">DAFTAR</button>
-        <img src="img/co_founder_mms.png" class="inline-block absolute bottom-0 left-12 h-4/5" alt="Co Founder MMS">
-        <img src="img/founder_mms.png" class="inline-block absolute bottom-0 right-12" alt="Founder MMS">
 
-        <div class="text-gold opacity-95 font-bold text-4xl shadow-lg shadow-navy font-montserrat">
-            <h1 class="absolute bottom-5 left-16">M. ZAHIZAN PUTRA</h1>
-            <h1 class="absolute bottom-5 right-16">BAYU SYAMPRAKASA</h1>
-        </div>
-        <div class="text-white font-bold text-lg font-inter">
-            <p class="absolute bottom-16 left-1/4">Co-Founder</p>
-            <p class="absolute bottom-16 right-[30%]">Founder</p>
-        </div> --}}
-        <img src="img/1.jpg" alt="Banner Image of B Management">
+    <section
+        class="min-h-[100vh] max-h-[100vh] relative overflow-hidden"
+    >
+        <img
+            src="{{ asset('img/banner_b_management.jpg') }}"
+            alt="banner"
+            class="absolute top-0 left-0 w-full h-full object-cover object-center"
+        />
     </section>
 
-
-    {{-- Section of Founder and Co-Founder --}}
     <section class="p-5 mb-12 font-montserrat">
         <h1 class="font-bold text-3xl text-navy ml-10 mt-10">Let's Know our Founder</h1>
         <p class="text-silver ml-10 mt-2 mb-10">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
@@ -71,5 +61,4 @@
         </div>
     </section>
 
-    <a href="/model" class="inline-block shadow bg-blue-300 p-3 rounded mt-4">Model <i class="fa-solid fa-address-book"></i></a>
-    @endsection
+@endsection
