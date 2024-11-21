@@ -1,4 +1,4 @@
-@extends('layouts.admin.index')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -7,7 +7,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 font-weight-bold text-dark">Pojok HIMSI</h1>
+        <h1 class="h3 mb-0 font-weight-bold text-dark">Berita</h1>
     </div>
 
     @if (session()->has('success'))
@@ -29,7 +29,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <a class="btn btn-primary" href="{{ route('insert-pojokHimsi') }}"><i class="fa fa-plus"></i> Create New Post</a>
+            <a class="btn btn-primary" href="{{ route('insert-berita') }}"><i class="fa fa-plus"></i> Create New Post</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -39,16 +39,14 @@
                             <th>No</th>
                             <th>Title</th>
                             <th>Published</th>
-                            <th>Author</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>No</th>
+                            <th>Id</th>
                             <th>Title</th>
                             <th>Published</th>
-                            <th>Author</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -56,18 +54,17 @@
                         <?php $no = 1; ?>
                         @foreach($posts as $post)
                             <tr>
-                                <td><?= $no; ?></td>
+                                <td>{{ $post["id"] }}</td>
                                 <td>{{ $post["title"] }}</td>
                                 <td>{{ date('d F Y', strtotime($post['created_at'])) }}</td>
-                                <td>{{ $post["author"] }}</td>
                                 <td>
-                                    <a class="btn btn-md btn-warning" href="{{ route('update-pojokHimsi', $post['postID']) }}"><i class="fa fa-pen"></i> Edit</a>
-                                    <button class="btn btn-md btn-danger" data-toggle="modal" data-target="#deletePost{{ $post['postID'] }}"><i class="fa fa-trash"></i> Delete</button>
+                                    <a class="btn btn-md btn-warning" href="{{ route('update-berita', $post['id']) }}"><i class="fa fa-pen"></i> Edit</a>
+                                    <button class="btn btn-md btn-danger" data-toggle="modal" data-target="#deletePost{{ $post['id'] }}"><i class="fa fa-trash"></i> Delete</button>
                                 </td>
                             </tr>
 
                             <!-- Delete Modal -->
-                            <div class="modal" id="deletePost{{ $post['postID'] }}">
+                            <div class="modal" id="deletePost{{ $post['id'] }}">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
 
@@ -86,7 +83,7 @@
                                             @csrf
                                             @method('delete')
                                             <!-- Modal footer -->
-                                            <input type="hidden" name="postID" value="{{ $post['postID'] }}">
+                                            <input type="hidden" name="id" value="{{ $post['id'] }}">
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 <button type="submit" name="hapus" class="btn btn-danger">Delete</button>

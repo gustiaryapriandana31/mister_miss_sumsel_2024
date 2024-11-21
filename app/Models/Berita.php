@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berita extends Model
 {
-
     /**
      * The attributes that are mass assignable.
      *
@@ -17,10 +16,13 @@ class Berita extends Model
         "title",
         "thumbnail",
         "content",
-        "trigger",
     ];
 
-    public static function getPostById($id = null) {
+    public static function getPost($id = null) {
+        if ($id == null) {
+            return Berita::all();
+        }
+
         return Berita::where('id', $id)->first();
     }
 }
