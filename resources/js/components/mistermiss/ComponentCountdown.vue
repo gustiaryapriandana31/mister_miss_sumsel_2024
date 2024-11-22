@@ -30,12 +30,12 @@
                             ></div>
                             <div class="flex gap-x-4 gap-y-3 mt-6 flex-wrap">
                                 <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdP3HlJhMHXFroq-Qzk9XHKXiuZMJwlKoGwipmawNiZLkjnfQ/viewform?usp=sf_link&fbclid=PAZXh0bgNhZW0CMTEAAaY58dw0k_to3rbyucnGOdfcB1dS-BsCvc7jN6YS7uV_G11hPoAeYFhCLM8_aem_5HMaxtwxkLJLUq0wlG8j1w"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSdP3HlJhMHXFroq-Qzk9XHKXiuZMJwlKoGwipmawNiZLkjnfQ/viewform?usp=sf_link&fbclid=PAZXh0bgNhZW0CMTEAAaY58dw0k_to3rbyucnGOdfcB1dS-BsCvc7jN6YS7uV_G11hPoAeYFhCLM8_aem_5HMaxtwxkLJLUq0wlG8j1w" target="_blank"
                                     class="bg-gold hover:bg-gold/85 text-black transition-all duration-200 py-3 px-2 rounded-sm text-base"
                                     >Daftar Sekarang
                                 </a>
                                 <a
-                                    href="#tentangKami"
+                                    href="/mister-miss-sumsel"
                                     class="bg-white hover:bg-white/85 text-black transition-all duration-200 py-3 px-2 rounded-sm text-base"
                                     >Tentang Kami
                                 </a>
