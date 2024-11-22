@@ -7,7 +7,7 @@ export const menus = [
     {
         title: "B Model School",
         items: [],
-        link: "/b-model-school",
+        link: "/models-school",
     },
     {
         title: "Mister Miss Sumsel",

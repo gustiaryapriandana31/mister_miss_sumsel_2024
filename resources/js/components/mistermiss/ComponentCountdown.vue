@@ -19,7 +19,7 @@
                     </p>
                     <div class="support-by mt-3 mb-10">
                         <p class="font-semibold mb-4">
-                            Hitung mundur peutupan pendaftaran
+                            Hitung mundur penutupan pendaftaran
                         </p>
                         <div
                             class="bg-navy text-center flex flex-col items-center justify-center px-4 py-8"
