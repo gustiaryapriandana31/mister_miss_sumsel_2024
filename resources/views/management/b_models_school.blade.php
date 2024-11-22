@@ -34,7 +34,7 @@
                 </p>
             </div>
             <div class="md:basis-1/3">
-                <a href="#" class="text-sm inline-block mt-7 text-center z-10 bg-white hover:bg-navy py-3 px-5 text-navy hover:text-white font-bold rounded-md shadow-md md:px-8 md:max-w-max md:self-start lg:text-lg">Daftar Sekarang</a>
+                <a href="https://docs.google.com/forms/d/1sYCbYsWoxdRbzLfK5ubTXjkVtY4DnDJUUQmab4D9CDA/edit" class="text-sm inline-block mt-7 text-center z-10 bg-white hover:bg-navy py-3 px-5 text-navy hover:text-white font-bold rounded-md shadow-md md:px-8 md:max-w-max md:self-start lg:text-lg">Daftar Sekarang</a>
                 <p><i class="mr-2 mt-4 text-gold fa-solid fa-phone text-sm"></i>Contact Person : <a target="_blank" href="https://wa.me/6282184371382" class="inline-block">0821-8437-1382</a></p>
             </div>
         </section>    
